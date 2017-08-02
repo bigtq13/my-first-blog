@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Enterprise Integrated Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="Styles/commonT.css" />
+    <link rel="stylesheet" href="Styles/navStyle.css" />
+
+    <!-- favicon -->
+    <!-- for FF, Chrome, Opera -->
+    <link rel="icon" type="image/png" href="/images/icons/favicon-small.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/images/icons/favicon-large.png" sizes="32x32" />
+    <!-- for IE -->
+    <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/icons/favicon.ico" />
+
+    <!-- Javascript -->
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/modernizr.custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#nav-mobile").html($("#nav-main").html());
+            $("#nav-trigger span").click(function () {
+                if ($("nav#nav-mobile ul").hasClass("expanded")) {
+                    $("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
+                    $(this).removeClass("open");
+                } else {
+                    $("nav#nav-mobile ul").addClass("expanded").slideDown(250);
+                    $(this).addClass("open");
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="main">
+            <div class="outerContainer">
+                <div class="fixedMenuBar">
+                    <div id="logo">
+                        <a href="index.html">
+                            <img src="images/common/Tabitha-i.png" class="logoIcon" /></a>
+                    </div>
+                    <div id="nav-trigger">
+                        <span>Menu</span>
+                    </div>
+                    <nav id="nav-main">
+                        <ul>
+                            <li><a href="../index.html#projectsAnchor">PROJECTs</a></li>
+                            <li><a href="../index.html#publicationsAnchor">PUBLICATIONs</a></li>
+                            <li><a href="../index.html#profileAnchor">PROFILE</a></li>
+                        </ul>
+                    </nav>
+                    <nav id="nav-mobile"></nav>
+                </div>
+                <div class="innerContainer">
+                    <div class="line disappear"></div>
+                    <header id="objective">
+                        <img src="images/common/eipicon.png" />
+                        <article>
+                            <h1>A Web application leads sales process from customer creation to case completion.</h1>
+                        </article>
+                    </header>
+
+                    <div class="line"></div>
+                    <!--STORY-->
+                    <section id="story">
+                        <h2>Story</h2>
+                        <article>
+                            <header role="banner">
+                                <p>Chunghwa Telecom is the biggest telecommunication company in Taiwan, and has established U.S.A. branch since 2002 in San Jose, California, namely Chunghwa Telecom Global. For the most cases, customers of this company are at the enterprises who need telecommunication products or services, such as voice, VPN (Virtual Private Network), IP PBX (Internet Protocol Private Branch Exchange), IDC (Internet Data Center), and so on. About the operation process, it has been paper-based for a long time, Yet the need of systematically processing sales through customer, quote, order, pricing, inquiry, provisioning management is necessary for retrieving and using data effectively and efficiently.</p>
+                            </header>
+                        </article>
+                    </section>
+
+                    <!--ROLE-->
+                    <section id="role">
+                        <h2>Role</h2>
+                        <article>
+                            <header role="banner">
+                                <p>Requirement Analyzer & Web Designer & Developer</p>
+                            </header>
+                        </article>
+                    </section>
+
+                    <!--PROCESS-->
+                    <section id="process">
+                        <h2>Process</h2>
+                        <article>
+                            <header role="banner">
+                                <div class="divCenter">
+                                    <ol class="tilted-list">
+                                        <li><strong>User Interview: </strong>To observe user behaviors and discuss the experience of paper-based operation.</li>
+                                        <li><strong>User Interaction with Paper Prototype: </strong>To analyze user requirements and to design paper prototype. To modify the layout and functions based on users’ feedback after discussing with paper prototype.</li>
+                                        <li><strong>Development and Test: </strong>To develop Web application with .NET C#, Visual Studio, SQL Server, CSS, JavaScript, and JQuery. To conduct the user acceptance test. To launch the project. To get feedback from users for next generation.</li>
+                                    </ol>
+                                </div>
+                            </header>
+                            <figure>
+                                <img src="images/common/paper prototype.png" alt="Paper Prototype of Calculation Table"/>
+                                <figcaption>Paper Prototype is a quick and easily-made tool in order to discuss with users, especially giving users graphically ideas of what the system layout would look like and how functions would be manipulated. This graph is an example of paper prototype of pricing calculation table. Some general options display on the top, is followed by product items with detail options, such as unit price, unit, price of 1 year, and the cost. At the bottom of this prototype, there are several additional price options, for instance subtotal, discount, and tax, and the calculate button is at bottom-right side.</figcaption>
+                            </figure>
+                        </article>
+                    </section>
+
+                    <!--RESULT-->
+                    <section id="result">
+                        <h2>Result</h2>
+                        <article>
+                            <header role="banner">
+                                <ol class="tilted-list">
+                                    <li><strong>Efficient and automatic sales handling. </strong>Authentication and authorization manage is especially good for team-structured organization with integration all sales process via a Web application.</li>
+                                    <li><strong>Automatic notification. </strong>Status-based structure makes the business flow smoothly with email notification, for example, for assigning a task to the next coworker.</li>
+                                    <li><strong>Easily modification of Web application with flexible data structure. </strong>It is pretty easy to add, for example, an employee, a product, or a function since we do rendering into HTML elements from xml.</li>
+                                </ol>
+                            </header>
+                            <figure>
+                                <img src="images/common/customer page.png" alt="The Management of Customer"/>
+                                <figcaption>Not only customer of addition, edition, and deletion, but also data download, map direction, and contacts management are provided in Customer Page. We also link related sales cases at the bottom of the screen, so that users are able to link to them with clicking.</figcaption>
+                            </figure>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- #main -->
+
+
+        <!-- Footer -->
+        <footer role="contentinfo" class="footer">
+            <!-- Footer Links -->
+            <ul class="footerLeft">
+                <li><a href="mailto:bigtq13@gmail.com">
+                    <img src="images/common/email.png" /></a></li>
+                <li><a href="https://www.linkedin.com/pub/tabitha-tsai/74/805/ba">
+                    <img src="images/common/linkedin.png" /></a></li>
+                <li><a href="https://get.google.com/albumarchive/104127423831097898950?source=pwa">
+                    <img src="images/common/flickr.png" /></a></li>
+                <li><a href="https://www.facebook.com/tabitha.tsai">
+                    <img src="images/common/facebook.png" /></a></li>
+            </ul>
+            <p class="footerRight">© 2016 yi-shan tabitha tsai</p>
+        </footer>
+        <!-- /footer -->
+    </div>
+    <!-- /#wrapper -->
+</body>
+</html>

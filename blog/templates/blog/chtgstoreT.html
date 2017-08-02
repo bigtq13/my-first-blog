@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CHTG Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="Styles/commonT.css" />
+    <link rel="stylesheet" href="Styles/navStyle.css" />
+
+    <!-- favicon -->
+    <!-- for FF, Chrome, Opera -->
+    <link rel="icon" type="image/png" href="/images/icons/favicon-small.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/images/icons/favicon-large.png" sizes="32x32" />
+    <!-- for IE -->
+    <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/icons/favicon.ico" />
+
+    <!-- Javascript -->
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/modernizr.custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#nav-mobile").html($("#nav-main").html());
+            $("#nav-trigger span").click(function () {
+                if ($("nav#nav-mobile ul").hasClass("expanded")) {
+                    $("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
+                    $(this).removeClass("open");
+                } else {
+                    $("nav#nav-mobile ul").addClass("expanded").slideDown(250);
+                    $(this).addClass("open");
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="main">
+            <div class="outerContainer">
+                <div class="fixedMenuBar">
+                    <div id="logo">
+                        <a href="index.html">
+                            <img src="images/common/Tabitha-i.png" class="logoIcon" /></a>
+                    </div>
+                    <div id="nav-trigger">
+                        <span>Menu</span>
+                    </div>
+                    <nav id="nav-main">
+                        <ul>
+                            <li><a href="../index.html#projectsAnchor">PROJECTs</a></li>
+                            <li><a href="../index.html#publicationsAnchor">PUBLICATIONs</a></li>
+                            <li><a href="../index.html#profileAnchor">PROFILE</a></li>
+                        </ul>
+                    </nav>
+                    <nav id="nav-mobile"></nav>
+                </div>
+                <div class="innerContainer">
+                    <div class="line disappear"></div>
+                    <header id="objective">
+                        <img src="images/common/chtgstoreicon.png" />
+                        <article>
+                            <h1>An online store for telecommunication and value-added products.</h1>
+                        </article>
+                    </header>
+
+                    <div class="line"></div>
+                    <!--STORY-->
+                    <section id="story">
+                        <h2>Story</h2>
+                        <article>
+                            <header role="banner">
+                                <p>Product managers are usually confused that there are too many backend platforms to work with: online store backend, order management system, provisioning system, payment system, digital-product distribution system, and recharge and renew service system. Unfortunately, these systems are siloed so that product managers need to handle orders manually because of the inconsistent and the unconnected, not to mention the man-made mistakes. As a result, systematic and integrated system is the best and the only way to optimize the sale process.Online shopping wizard</p>
+                            </header>
+                            <figure>
+                                <img src="images/common/integrated backend system for management of customer and order and inventory and provision.png" alt="Integrated Backend System for Management of Customer, Order, Inventory, Provisioning, and so on" />
+                                <figcaption>We integrated all related systems into one Web applications to manage each stage of sales process easily and intuitively.</figcaption>
+                            </figure>
+                        </article>
+                    </section>
+
+                    <!--ROLE-->
+                    <section id="role">
+                        <h2>Role</h2>
+                        <article>
+                            <header role="banner">
+                                <p>Requirement Analyzer & Web Designer & Developer</p>
+                            </header>
+                        </article>
+                    </section>
+
+                    <!--PROCESS-->
+                    <section id="process">
+                        <h2>Process</h2>
+                        <article>
+                            <header role="banner">
+                                <div class="divCenter">
+                                    <ol class="tilted-list">
+                                        <li><strong>User Interview: </strong>To observe user behaviors and to discuss the experience of legacy systems.</li>
+                                        <li><strong>Legacy System Study: </strong>To research Website structure, database design, and data structure.</li>
+                                        <li><strong>Analysis and Design: </strong>To analyze user requirements and rank the development priority. To study the new payment gateway and related security issues. To design a consistent structure among these systems.</li>
+                                        <li><strong>Development and Test: </strong>To use .NET C#, Visual Studio, SQL Server, CSS, JavaScript, and JQuery. To conduct the user acceptance test. To launch the project. To get feedback from users for next version of the development.</li>
+                                    </ol>
+                                </div>
+                            </header>
+                            <figure>
+                                <img src="images/common/integrated backend system design.png" alt="The Connection between Systems" />
+                                <figcaption>Component-based describes the detail of each component and their connection. Namely, customer, order, documents, device, phone number, configuration information, digital service, and consumer requests. Furthermore, we use paper prototype to provide users experience what the integrated system look like.</figcaption>
+                            </figure>
+                        </article>
+                    </section>
+
+                    <!--RESULT-->
+                    <section id="result">
+                        <h2>Result</h2>
+                        <article>
+                            <header role="banner">
+                                <ol class="tilted-list">
+                                    <li><strong>Efficient and automatic order handling over the integrated backend platform. </strong></li>
+                                    <li><strong>Automatic notification. </strong>Stakeholder get automatic notification without manual maintenance of various records.</li>
+                                    <li><strong>Inventory management. </strong>For example: serial numbers of digital product are distributed after consumers pay online without manual distribution that could cause man-made mistakes.</li>
+                                </ol>
+                            </header>
+                            <figure>
+                                <img src="images/common/online shopping wizard.png" alt="Online Shopping Wizard" />
+                                <figcaption>Step-based shopping process is clearer for online-consumers, as well as, more cohesive information in each stage. We also simplified outlay by removing out-of-date and redundant fields.</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="images/common/service expiration notification.png" alt="Service Expiration Notification" />
+                                <figcaption>Before, PM should maintain the information of products in a document, for instance, product expiration date. Especially some digital product, such as online magazines, keep providing even the expiration date passed, so it is crucial to control the data correctly and automatically. Here is an example of expiration notification email sending to PM for the later sales operation.</figcaption>
+                            </figure>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- #main -->
+
+
+        <!-- Footer -->
+        <footer role="contentinfo" class="footer">
+            <!-- Footer Links -->
+            <ul class="footerLeft">
+                <li><a href="mailto:bigtq13@gmail.com">
+                    <img src="images/common/email.png" /></a></li>
+                <li><a href="https://www.linkedin.com/pub/tabitha-tsai/74/805/ba">
+                    <img src="images/common/linkedin.png" /></a></li>
+                <li><a href="https://get.google.com/albumarchive/104127423831097898950?source=pwa">
+                    <img src="images/common/flickr.png" /></a></li>
+                <li><a href="https://www.facebook.com/tabitha.tsai">
+                    <img src="images/common/facebook.png" /></a></li>
+            </ul>
+            <p class="footerRight">© 2016 yi-shan tabitha tsai</p>
+        </footer>
+        <!-- /footer -->
+    </div>
+    <!-- /#wrapper -->
+</body>
+</html>

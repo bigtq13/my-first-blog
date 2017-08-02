@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Monitor & Recovery Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="Styles/commonT.css" />
+    <link rel="stylesheet" href="Styles/navStyle.css" />
+
+    <!-- favicon -->
+    <!-- for FF, Chrome, Opera -->
+    <link rel="icon" type="image/png" href="/images/icons/favicon-small.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/images/icons/favicon-large.png" sizes="32x32" />
+    <!-- for IE -->
+    <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/icons/favicon.ico" />
+
+    <!-- Javascript -->
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/modernizr.custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#nav-mobile").html($("#nav-main").html());
+            $("#nav-trigger span").click(function () {
+                if ($("nav#nav-mobile ul").hasClass("expanded")) {
+                    $("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
+                    $(this).removeClass("open");
+                } else {
+                    $("nav#nav-mobile ul").addClass("expanded").slideDown(250);
+                    $(this).addClass("open");
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="main">
+            <div class="outerContainer">
+                <div class="fixedMenuBar">
+                    <div id="logo">
+                        <a href="index.html">
+                            <img src="images/common/Tabitha-i.png" class="logoIcon" /></a>
+                    </div>
+                    <div id="nav-trigger">
+                        <span>Menu</span>
+                    </div>
+                    <nav id="nav-main">
+                        <ul>
+                            <li><a href="../index.html#projectsAnchor">PROJECTs</a></li>
+                            <li><a href="../index.html#publicationsAnchor">PUBLICATIONs</a></li>
+                            <li><a href="../index.html#profileAnchor">PROFILE</a></li>
+                        </ul>
+                    </nav>
+                    <nav id="nav-mobile"></nav>
+                </div>
+
+                <div class="innerContainer">
+                    <div class="line disappear"></div>
+                    <header id="objective">
+                        <img src="images/common/amrticon.png" />
+                        <article>
+                            <h1>This Tool keeps Web servers and authentication servers running.</h1>
+                        </article>
+                    </header>
+
+                    <div class="line"></div>
+                    <!--STORY-->
+                    <section id="story">
+                        <h2>Story</h2>
+                        <article>
+                            <header role="banner">
+                                <p>A-MRT (Auto Monitor and Recovery Tool) is the structure to support Web and authentication servers which are the fundamental facilities to provide the online-self service for more than 31 million customers of Chunghwa Telecom. With approximately 5 million cases per year, our monitoring software needs to keep these servers running 24/7, especially during rush-hour and promotional events.</p>
+                            </header>
+                            <figure>
+                                <img src="images/common/amrt.png" alt="The Structure of Monitoring"/>
+                                <figcaption>The monitor set on the top of the picture, which provides status reports of servers and includes a supportive monitor marked by number 37 to avoid the monitor marked by number 184 not working, periodically tests servers on the bottom of the picture and reboots servers in case which do not work for a while.</figcaption>
+                            </figure>
+                        </article>
+                    </section>
+
+                    <!--ROLE-->
+                    <section id="role">
+                        <h2>Role</h2>
+                        <article>
+                            <header role="banner">
+                                <p>Design Leader & Developer</p>
+                            </header>
+                        </article>
+                    </section>
+
+                    <!--PROCESS-->
+                    <section id="process">
+                        <h2>Process</h2>
+                        <article>
+                            <header role="banner">
+                                <div class="divCenter">
+                                    <ol class="tilted-list">
+                                        <li><strong>Environment Study: </strong>To understand the hardware structure.</li>
+                                        <li><strong>Technology Survey and Structure Design: </strong>To research methods and strategies for server monitoring and recovering.</li>
+                                        <li><strong>Development and Test: </strong>To develop with .NET VB, Visual Studio, and SQL Server. And then Launch it.</li>
+                                    </ol>
+                                </div>
+                            </header>
+                            <figure>
+                                <img src="images/common/flow and status desgin.png" alt="Status-driven Detection and Recovery" />
+                                <figcaption>The monitor relies on the status of detection to provide correspondence: status modification, server restart, and status notification. Failure notification will be sent and server reboot will be executed after the third server failure, yet the monitor sends the recovered notification once this detected server works again. Otherwise, the monitor keeps rebooting failed servers till four tries, since servers have been restarted four times and to remain resources for a while to get another try. To this situation, we usually need human to figure out the problem since rebooting doesn't work for several times.</figcaption>
+                            </figure>
+                        </article>
+                    </section>
+
+                    <!--RESULT-->
+                    <section id="result">
+                        <h2>Result</h2>
+                        <article>
+                            <header role="banner">
+                                <ol class="tilted-list">
+                                    <li><strong>24/7 notification if servers have some special situation, such as suspension or recovery via email and the SMS.</strong></li>
+                                    <li><strong>Reports of server execution are available to be analyzed for efficacy.</strong></li>
+                                </ol>
+                            </header>
+                            <figure>
+                                <img src="images/common/error notification over SMS message and email.png" alt="Error Notification over SMS Message and Email" />
+                                <figcaption>Cell phone screen shot is on the left of the picture; email displays on the right. Both tell users server failure status, date, time, and server identification.</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="images/common/recovery notification over SMS message and email.png" alt="Recovery Notification over SMS Message and Email" />
+                                <figcaption>Cell phone screen shot is on the left of the picture; email displays on the right. Both tell users server recovery status, date, time, and server identification.</figcaption>
+                            </figure>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- #main -->
+
+        <!-- Footer -->
+        <footer role="contentinfo" class="footer">
+            <!-- Footer Links -->
+            <ul class="footerLeft">
+                <li><a href="mailto:bigtq13@gmail.com">
+                    <img src="images/common/email.png" /></a></li>
+                <li><a href="https://www.linkedin.com/pub/tabitha-tsai/74/805/ba">
+                    <img src="images/common/linkedin.png" /></a></li>
+                <li><a href="https://get.google.com/albumarchive/104127423831097898950?source=pwa">
+                    <img src="images/common/flickr.png" /></a></li>
+                <li><a href="https://www.facebook.com/tabitha.tsai">
+                    <img src="images/common/facebook.png" /></a></li>
+            </ul>
+            <p class="footerRight">© 2016 yi-shan tabitha tsai</p>
+        </footer>
+        <!-- /footer -->
+    </div>
+    <!-- /#wrapper -->
+</body>
+</html>

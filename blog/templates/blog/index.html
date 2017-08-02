@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿{% load staticfiles %}
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Yi-Shan Tabitha Tsai</title>
@@ -7,8 +8,10 @@
     <!-- CSS -->
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="Styles/commonT.css" />
-    <link rel="stylesheet" href="Styles/navStyle.css" />
+    <link rel="stylesheet" href="{% static 'Styles/commonT.css' %}">
+    <link rel="stylesheet" href="{% static 'Styles/navStyle.css' %}">
+    <!--<link rel="stylesheet" href="Styles/commonT.css" />
+    <link rel="stylesheet" href="Styles/navStyle.css" /> -->
 
     <!-- favicon -->
     <!-- for FF, Chrome, Opera -->
@@ -46,7 +49,8 @@
                 <div class="fixedMenuBar">
                     <a href="index.html">
                         <div id="logo">
-                            <img src="images/common/Tabitha-i.png" class="logoIcon" />
+                         <!-- <img src="images/common/Tabitha-i.png" class="logoIcon" />-->
+			 <img src ="{% static 'images/common/Tabitha-i.png' %}" class="logoIcon" />
                         </div>
                     </a>
                     <div id="nav-trigger">
