@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿{% load staticfiles %}
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Enterprise Integrated Portal</title>
@@ -7,20 +8,20 @@
     <!-- CSS -->
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="Styles/commonT.css" />
-    <link rel="stylesheet" href="Styles/navStyle.css" />
+    <link rel="stylesheet" href="{% static 'Styles/commonT.css' %}" />
+    <link rel="stylesheet" href="{% static 'Styles/navStyle.css' %}" />
 
     <!-- favicon -->
     <!-- for FF, Chrome, Opera -->
-    <link rel="icon" type="image/png" href="/images/icons/favicon-small.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="/images/icons/favicon-large.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="{% static '/images/icons/favicon-small.png' %}" sizes="16x16" />
+    <link rel="icon" type="image/png" href="{% static '/images/icons/favicon-large.png' %}" sizes="32x32" />
     <!-- for IE -->
-    <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico" />
-    <link rel="shortcut icon" type="image/x-icon" href="/images/icons/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="{% static '/images/icons/favicon.ico' %}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{% static '/images/icons/favicon.ico' %}" />
 
     <!-- Javascript -->
-    <script src="Scripts/jquery-1.9.1.min.js"></script>
-    <script src="Scripts/modernizr.custom.js"></script>
+    <script src="{% static 'Scripts/jquery-1.9.1.min.js' %}"></script>
+    <script src="{% static 'Scripts/modernizr.custom.js' %}"></script>
     <script>
         $(document).ready(function () {
             $("#nav-mobile").html($("#nav-main").html());
@@ -43,8 +44,8 @@
             <div class="outerContainer">
                 <div class="fixedMenuBar">
                     <div id="logo">
-                        <a href="index.html">
-                            <img src="images/common/Tabitha-i.png" class="logoIcon" /></a>
+                        <a href="../index.html">
+                            <img src="{% static 'images/common/Tabitha-i.png' %}" class="logoIcon" /></a>
                     </div>
                     <div id="nav-trigger">
                         <span>Menu</span>
@@ -61,7 +62,7 @@
                 <div class="innerContainer">
                     <div class="line disappear"></div>
                     <header id="objective">
-                        <img src="images/common/eipicon.png" />
+                        <img src="{% static 'images/common/eipicon.png' %}" />
                         <article>
                             <h1>A Web application leads sales process from customer creation to case completion.</h1>
                         </article>
@@ -102,7 +103,7 @@
                                 </div>
                             </header>
                             <figure>
-                                <img src="images/common/paper prototype.png" alt="Paper Prototype of Calculation Table"/>
+                                <img src="{% static 'images/common/paper prototype.png' %}" alt="Paper Prototype of Calculation Table"/>
                                 <figcaption>Paper Prototype is a quick and easily-made tool in order to discuss with users, especially giving users graphically ideas of what the system layout would look like and how functions would be manipulated. This graph is an example of paper prototype of pricing calculation table. Some general options display on the top, is followed by product items with detail options, such as unit price, unit, price of 1 year, and the cost. At the bottom of this prototype, there are several additional price options, for instance subtotal, discount, and tax, and the calculate button is at bottom-right side.</figcaption>
                             </figure>
                         </article>
@@ -120,7 +121,7 @@
                                 </ol>
                             </header>
                             <figure>
-                                <img src="images/common/customer page.png" alt="The Management of Customer"/>
+                                <img src="{% static 'images/common/customer page.png' %}" alt="The Management of Customer"/>
                                 <figcaption>Not only customer of addition, edition, and deletion, but also data download, map direction, and contacts management are provided in Customer Page. We also link related sales cases at the bottom of the screen, so that users are able to link to them with clicking.</figcaption>
                             </figure>
                         </article>
@@ -136,15 +137,15 @@
             <!-- Footer Links -->
             <ul class="footerLeft">
                 <li><a href="mailto:bigtq13@gmail.com">
-                    <img src="images/common/email.png" /></a></li>
+                    <img src="{% static 'images/common/email.png' %}" /></a></li>
                 <li><a href="https://www.linkedin.com/pub/tabitha-tsai/74/805/ba">
-                    <img src="images/common/linkedin.png" /></a></li>
+                    <img src="{% static 'images/common/linkedin.png' %}" /></a></li>
                 <li><a href="https://get.google.com/albumarchive/104127423831097898950?source=pwa">
-                    <img src="images/common/flickr.png" /></a></li>
+                    <img src="{% static 'images/common/flickr.png' %}" /></a></li>
                 <li><a href="https://www.facebook.com/tabitha.tsai">
-                    <img src="images/common/facebook.png" /></a></li>
+                    <img src="{% static 'images/common/facebook.png' %}" /></a></li>
             </ul>
-            <p class="footerRight">© 2016 yi-shan tabitha tsai</p>
+            <p class="footerRight">© 2017 yi-shan tabitha tsai</p>
         </footer>
         <!-- /footer -->
     </div>

@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿{% load staticfiles %}
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>CHT Self-Service</title>
@@ -7,20 +8,20 @@
     <!-- CSS -->
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="Styles/commonT.css" />
-    <link rel="stylesheet" href="Styles/navStyle.css" />
+    <link rel="stylesheet" href="{% static 'Styles/commonT.css' %}" />
+    <link rel="stylesheet" href="{% static 'Styles/navStyle.css' %}" />
 
     <!-- favicon -->
     <!-- for FF, Chrome, Opera -->
-    <link rel="icon" type="image/png" href="/images/icons/favicon-small.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="/images/icons/favicon-large.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="{% static '/images/icons/favicon-small.png' %}" sizes="16x16" />
+    <link rel="icon" type="image/png" href="{% static '/images/icons/favicon-large.png' %}" sizes="32x32" />
     <!-- for IE -->
-    <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico" />
-    <link rel="shortcut icon" type="image/x-icon" href="/images/icons/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="{% static '/images/icons/favicon.ico' %}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{% static '/images/icons/favicon.ico' %}" />
 
     <!-- Javascript -->
-    <script src="Scripts/jquery-1.9.1.min.js"></script>
-    <script src="Scripts/modernizr.custom.js"></script>
+    <script src="{% static 'Scripts/jquery-1.9.1.min.js' %}"></script>
+    <script src="{% static 'Scripts/modernizr.custom.js' %}"></script>
     <script>
         $(document).ready(function () {
             $("#nav-mobile").html($("#nav-main").html());
@@ -43,8 +44,8 @@
             <div class="outerContainer">
                 <div class="fixedMenuBar">
                     <div id="logo">
-                        <a href="index.html">
-                            <img src="images/common/Tabitha-i.png" class="logoIcon" /></a>
+                        <a href="../index.html">
+                            <img src="{% static 'images/common/Tabitha-i.png' %}" class="logoIcon" /></a>
                     </div>
                     <div id="nav-trigger">
                         <span>Menu</span>
@@ -62,7 +63,7 @@
                 <div class="innerContainer">
                     <div class="line disappear"></div>
                     <header id="objective">
-                        <img src="images/common/chtselfserviceicon.png" />
+                        <img src="{% static 'images/common/chtselfserviceicon.png' %}" />
                         <article>
                             <h1>This portal provides many self-services for residential.</h1>
                         </article>
@@ -77,7 +78,7 @@
                                 <p>Chunghwa Telecom is the biggest telecommunication company in Taiwan, furnishing not only residential (about 8 million) but also business customers (about 3 million) with broadband internet access, television and telephone, and wireless service. Traditional service channels, including telephone, email, and SMS, together with social network, online chat, location-based service, and innovative Web-based self-service(WBSS) are provided to maximize customer satisfaction. Our team is in charge of developing the Web-based portal for self-services, such as applying for home phone service, checking billing history, switching wireless package, and suspending value-added services, and so on.</p>
                             </header>
                             <figure>
-                                <img src="images/common/chtselfservice.png" alt="Main Menu of Online Self-Services" />
+                                <img src="{% static 'images/common/chtselfservice.png' %}" alt="Main Menu of Online Self-Services" />
                                 <figcaption>We list main menu with personal service, application service, Q&A, Mobile-based service, and online shop. And above all, we display popular self-services at the first page to minimize function-searching time and to encourage users to try functions.</figcaption>
                             </figure>
                         </article>
@@ -108,11 +109,11 @@
                                 </div>
                             </header>
                             <figure>
-                                <img src="images/common/server design with load-balancing.png" alt="Server Designed with Environment-Separating, Load-Balancing, Security-Protecting" />
+                                <img src="{% static 'images/common/server design with load-balancing.png' %}" alt="Server Designed with Environment-Separating, Load-Balancing, Security-Protecting" />
                                 <figcaption>We not only separate test and online environments, but also dispatch specific functions to servers: applications and authorization. Moreover, there are more than one application servers and authentication servers in order to balance the load of users’ requests. About the security and efficiency, firewall and integrated mechanism keep working 27/4 definitely.</figcaption>
                             </figure>
                             <figure>
-                                <img src="images/common/user interface design.png" alt="User Interface Design" />
+                                <img src="{% static 'images/common/user interface design.png' %}" alt="User Interface Design" />
                                 <figcaption>According to the feedback of users, our team made the user interface more precise and intuitive. The screen displays the easily-understood function name and is followed by the more-detailed function description. The middle of the screen provides the function area, and later comes some relatively minor description for this service.</figcaption>
                             </figure>
                         </article>
@@ -129,11 +130,11 @@
                                 </ol>
                             </header>
                             <figure>
-                                <img src="images/common/checking billing history page.png" alt="Billing History Checking Page" />
+                                <img src="{% static 'images/common/checking billing history page.png' %}" alt="Billing History Checking Page" />
                                 <figcaption>Take one of popular self-services as an example, billing history checking, customers are able to check last six-month billing in order to, for instance, control their budgets or apply for related services. Screen shows detail information at the left side, such as billing amount, service package, purchased value-added services; At the right side, the bar diagram graphically displays last six-month billing and users can click it to see the detail of each month.</figcaption>
                             </figure>
                             <figure>
-                                <img src="images/common/pre-paid card reservation for foreigner visitors.png" alt="Pre-Paid Card Reservation for Visitors" />
+                                <img src="{% static 'images/common/pre-paid card reservation for foreigner visitors.png' %}" alt="Pre-Paid Card Reservation for Visitors" />
                                 <figcaption>Self-Service provides three languages: traditional Chinese, simplified Chinese, and English. Visitors are encouraged to use Pre-Paid Card Reservation service before they come to Taiwan, and get the service right after their arrival.</figcaption>
                             </figure>
                         </article>
@@ -149,15 +150,15 @@
             <!-- Footer Links -->
             <ul class="footerLeft">
                 <li><a href="mailto:bigtq13@gmail.com">
-                    <img src="images/common/email.png" /></a></li>
+                    <img src="{% static 'images/common/email.png' %}" /></a></li>
                 <li><a href="https://www.linkedin.com/pub/tabitha-tsai/74/805/ba">
-                    <img src="images/common/linkedin.png" /></a></li>
+                    <img src="{% static 'images/common/linkedin.png' %}" /></a></li>
                 <li><a href="https://get.google.com/albumarchive/104127423831097898950?source=pwa">
-                    <img src="images/common/flickr.png" /></a></li>
+                    <img src="{% static 'images/common/flickr.png' %}" /></a></li>
                 <li><a href="https://www.facebook.com/tabitha.tsai">
-                    <img src="images/common/facebook.png" /></a></li>
+                    <img src="{% static 'images/common/facebook.png' %}" /></a></li>
             </ul>
-            <p class="footerRight">© 2016 yi-shan tabitha tsai</p>
+            <p class="footerRight">© 2017 yi-shan tabitha tsai</p>
         </footer>
         <!-- /footer -->
     </div>

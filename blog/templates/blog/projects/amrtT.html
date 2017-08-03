@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿{% load staticfiles %}
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Monitor & Recovery Tool</title>
@@ -7,20 +8,20 @@
     <!-- CSS -->
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="Styles/commonT.css" />
-    <link rel="stylesheet" href="Styles/navStyle.css" />
+    <link rel="stylesheet" href="{% static 'Styles/commonT.css' %}" />
+    <link rel="stylesheet" href="{% static 'Styles/navStyle.css' %}" />
 
     <!-- favicon -->
     <!-- for FF, Chrome, Opera -->
-    <link rel="icon" type="image/png" href="/images/icons/favicon-small.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="/images/icons/favicon-large.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="{% static '/images/icons/favicon-small.png' %}" sizes="16x16" />
+    <link rel="icon" type="image/png" href="{% static '/images/icons/favicon-large.png' %}" sizes="32x32" />
     <!-- for IE -->
-    <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico" />
-    <link rel="shortcut icon" type="image/x-icon" href="/images/icons/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="{% static '/images/icons/favicon.ico' %}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{% static '/images/icons/favicon.ico' %}" />
 
     <!-- Javascript -->
-    <script src="Scripts/jquery-1.9.1.min.js"></script>
-    <script src="Scripts/modernizr.custom.js"></script>
+    <script src="{% static 'Scripts/jquery-1.9.1.min.js' %}"></script>
+    <script src="{% static 'Scripts/modernizr.custom.js' %}"></script>
     <script>
         $(document).ready(function () {
             $("#nav-mobile").html($("#nav-main").html());
@@ -43,8 +44,8 @@
             <div class="outerContainer">
                 <div class="fixedMenuBar">
                     <div id="logo">
-                        <a href="index.html">
-                            <img src="images/common/Tabitha-i.png" class="logoIcon" /></a>
+                        <a href="../index.html">
+                            <img src="{% static 'images/common/Tabitha-i.png' %}" class="logoIcon" /></a>
                     </div>
                     <div id="nav-trigger">
                         <span>Menu</span>
@@ -62,7 +63,7 @@
                 <div class="innerContainer">
                     <div class="line disappear"></div>
                     <header id="objective">
-                        <img src="images/common/amrticon.png" />
+                        <img src="{% static 'images/common/amrticon.png' %}" />
                         <article>
                             <h1>This Tool keeps Web servers and authentication servers running.</h1>
                         </article>
@@ -77,7 +78,7 @@
                                 <p>A-MRT (Auto Monitor and Recovery Tool) is the structure to support Web and authentication servers which are the fundamental facilities to provide the online-self service for more than 31 million customers of Chunghwa Telecom. With approximately 5 million cases per year, our monitoring software needs to keep these servers running 24/7, especially during rush-hour and promotional events.</p>
                             </header>
                             <figure>
-                                <img src="images/common/amrt.png" alt="The Structure of Monitoring"/>
+                                <img src="{% static 'images/common/amrt.png' %}" alt="The Structure of Monitoring"/>
                                 <figcaption>The monitor set on the top of the picture, which provides status reports of servers and includes a supportive monitor marked by number 37 to avoid the monitor marked by number 184 not working, periodically tests servers on the bottom of the picture and reboots servers in case which do not work for a while.</figcaption>
                             </figure>
                         </article>
@@ -107,7 +108,7 @@
                                 </div>
                             </header>
                             <figure>
-                                <img src="images/common/flow and status desgin.png" alt="Status-driven Detection and Recovery" />
+                                <img src="{% static 'images/common/flow and status desgin.png' %}" alt="Status-driven Detection and Recovery" />
                                 <figcaption>The monitor relies on the status of detection to provide correspondence: status modification, server restart, and status notification. Failure notification will be sent and server reboot will be executed after the third server failure, yet the monitor sends the recovered notification once this detected server works again. Otherwise, the monitor keeps rebooting failed servers till four tries, since servers have been restarted four times and to remain resources for a while to get another try. To this situation, we usually need human to figure out the problem since rebooting doesn't work for several times.</figcaption>
                             </figure>
                         </article>
@@ -124,11 +125,11 @@
                                 </ol>
                             </header>
                             <figure>
-                                <img src="images/common/error notification over SMS message and email.png" alt="Error Notification over SMS Message and Email" />
+                                <img src="{% static 'images/common/error notification over SMS message and email.png' %}" alt="Error Notification over SMS Message and Email" />
                                 <figcaption>Cell phone screen shot is on the left of the picture; email displays on the right. Both tell users server failure status, date, time, and server identification.</figcaption>
                             </figure>
                             <figure>
-                                <img src="images/common/recovery notification over SMS message and email.png" alt="Recovery Notification over SMS Message and Email" />
+                                <img src="{% static 'images/common/recovery notification over SMS message and email.png' %}" alt="Recovery Notification over SMS Message and Email" />
                                 <figcaption>Cell phone screen shot is on the left of the picture; email displays on the right. Both tell users server recovery status, date, time, and server identification.</figcaption>
                             </figure>
                         </article>
@@ -143,15 +144,15 @@
             <!-- Footer Links -->
             <ul class="footerLeft">
                 <li><a href="mailto:bigtq13@gmail.com">
-                    <img src="images/common/email.png" /></a></li>
+                    <img src="{% static 'images/common/email.png' %}" /></a></li>
                 <li><a href="https://www.linkedin.com/pub/tabitha-tsai/74/805/ba">
-                    <img src="images/common/linkedin.png" /></a></li>
+                    <img src="{% static 'images/common/linkedin.png' %}" /></a></li>
                 <li><a href="https://get.google.com/albumarchive/104127423831097898950?source=pwa">
-                    <img src="images/common/flickr.png" /></a></li>
+                    <img src="{% static 'images/common/flickr.png' %}" /></a></li>
                 <li><a href="https://www.facebook.com/tabitha.tsai">
-                    <img src="images/common/facebook.png" /></a></li>
+                    <img src="{% static 'images/common/facebook.png' %}" /></a></li>
             </ul>
-            <p class="footerRight">© 2016 yi-shan tabitha tsai</p>
+            <p class="footerRight">© 2017 yi-shan tabitha tsai</p>
         </footer>
         <!-- /footer -->
     </div>

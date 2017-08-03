@@ -15,15 +15,19 @@
 
     <!-- favicon -->
     <!-- for FF, Chrome, Opera -->
-    <link rel="icon" type="image/png" href="/images/icons/favicon-small.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="/images/icons/favicon-large.png" sizes="32x32" />
+    <!--<link rel="icon" type="image/png" href="/images/icons/favicon-small.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/images/icons/favicon-large.png" sizes="32x32" />-->
+    <link rel="icon" type="image/png" href="{% static '/images/icons/favicon-small.png' %}" sizes="16x16" />
+    <link rel="icon" type="image/png" href="{% static '/images/icons/favicon-large.png' %}" sizes="32x32" />
     <!-- for IE -->
-    <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico" />
-    <link rel="shortcut icon" type="image/x-icon" href="/images/icons/favicon.ico" />
+    <!-- <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/icons/favicon.ico" />-->
+    <link rel="icon" type="image/x-icon" href="{% static '/images/icons/favicon.ico' %}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{% static '/images/icons/favicon.ico' %}" />
 
     <!-- Javascript -->
-    <script src="Scripts/jquery-1.9.1.min.js"></script>
-    <script src="Scripts/modernizr.custom.js"></script>
+    <script src="{% static 'Scripts/jquery-1.9.1.min.js' %}"></script>
+    <script src="{% static 'Scripts/modernizr.custom.js' %}"></script>
     <script>
         $(document).ready(function () {
             $("#nav-mobile").html($("#nav-main").html());
@@ -68,7 +72,8 @@
                 <div class="innerContainer">
                     <div class="line disappear"></div>
                     <header id="objective">
-                        <img src="images/common/design.png" />
+                      <!--<img src="images/common/design.png" />-->
+		       <img src="{% static 'images/common/design.png' %}" />
                         <article>
                             <h1>OBJECTIVE</h1>
                             <p>Use engineering background to acquire a broad range of interdisciplinary knowledge in order to deliver a successful experience to the user. </p>
@@ -80,7 +85,7 @@
                     <section id="projects">
                         <h2 id="projectsAnchor">Projects</h2>
                         <!--EIP-->
-                        <a href="eipT.html">
+                        <a href="projects/eipT.html">
                             <article class="hoverSeduction topLeft">
                                 <header role="banner">
                                     <h3>Enterprise Integrated Portal</h3>
@@ -88,13 +93,14 @@
                                     <p>CHTG 2014-2016</p>
                                 </header>
                                 <div class="linkPicture">
-                                    <img src="images/common/chtgstore-small.png" alt="" class="smallLinkPicture" />
+                                  <!--<img src="images/common/chtgstore-small.png" alt="" class="smallLinkPicture" />-->
+				  <img src="{% static 'images/common/chtgstore-small.png' %}" alt="" class="smallLinkPicture" />
                                 </div>
                             </article>
                         </a>
 
                         <!--CHTGSTORE-->
-                        <a href="chtgstoreT.html">
+                        <a href="projects/chtgstoreT.html">
                             <article class="hoverSeduction topRight">
                                 <header role="banner">
                                     <h3>CHTG Store</h3>
@@ -102,13 +108,14 @@
                                     <p>CHTG 2014</p>
                                 </header>
                                 <div class="linkPicture">
-                                    <img src="images/common/eip-small.png" alt="" class="smallLinkPicture" />
+                                 <!-- <img src="images/common/eip-small.png" alt="" class="smallLinkPicture" />-->
+				  <img src="{% static 'images/common/eip-small.png' %}" alt="" class="smallLinkPicture" />
                                 </div>
                             </article>
                         </a>
 
                         <!--CHTSELFSERVICE-->
-                        <a href="chtselfserviceT.html">
+                        <a href="projects/chtselfserviceT.html">
                             <article class="hoverSeduction bottomLeft">
                                 <header role="banner">
                                     <h3>CHT Self-Service</h3>
@@ -116,13 +123,14 @@
                                     <p>CHT 2010-2013</p>
                                 </header>
                                 <div class="linkPicture">
-                                    <img src="images/common/chtselfservice-small.png" alt="" class="smallLinkPicture" />
+                                  <!--<img src="images/common/chtselfservice-small.png" alt="" class="smallLinkPicture" />-->
+				  <img src="{% static 'images/common/chtselfservice-small.png' %}" alt="" class="smallLinkPicture" />
                                 </div>
                             </article>
                         </a>
 
                         <!--AMRT-->
-                        <a href="amrtT.html">
+                        <a href="projects/amrtT.html">
                             <article class="hoverSeduction bottomRight">
                                 <header role="banner">
                                     <h3>Monitor & Recovery Tool</h3>
@@ -130,7 +138,8 @@
                                     <p>CHT 2010</p>
                                 </header>
                                 <div class="linkPicture">
-                                    <img src="images/common/amrt-small.png" alt="" class="smallLinkPicture" />
+                                  <!--<img src="images/common/amrt-small.png" alt="" class="smallLinkPicture" />-->
+				  <img src="{% static 'images/common/amrt-small.png' %}" alt="" class="smallLinkPicture" />
                                 </div>
                             </article>
                         </a>
@@ -139,18 +148,6 @@
                     <!-- Publications -->
                     <section id="publications">
                         <h2 id="publicationsAnchor">Publications</h2>
-                        <!--Development of Enterprise Customer Integrated Service System-->
-                        <article>
-                            <header role="banner">
-                                <h3>Development of Enterprise Customer Integrated Service System</h3>
-                                <p>CHT 2013</p>
-                            </header>
-                            <div class="publicationContent">
-                                <p>Through the auxiliary of the information system, enterprises can easily provide a tailor-made service environment to specific exclusive customers for proceeding personalized service and differentiating marketing in order to enhance customer experience feelings then increase enterprise revenues. In this paper, it describes the development process of the Enterprise Customer Integrated Service System, including user interface design, system modules, system architecture, process and security design and how to establish a customer-oriented and intimate enterprise customer self-service portal.</p>
-                                <a href="Development of Enterprise Customer Integrated Service System.pdf" target="_blank">
-                                    <img class="smallDownloadPicture" src="images/common/download.png" alt="" /></a>
-                            </div>
-                        </article>
 
                         <!--Enterprise Customer Self-Service-->
                         <article>
@@ -159,9 +156,9 @@
                                 <p>CHT 2013</p>
                             </header>
                             <div class="publicationContent">
-                                <p>The expectation of customers has expanded in products and services, and the role of customers has become active. Additionally, customized self-services reduce interaction costs and help companies execute marketing programs among different market segments. This improves customer satisfaction and return on investment. The main purpose of this paper is to focus on the evolution, service and trend of enterprise customer self-service portal. Referring to the samples of Verizon, AT&T and Chunghwa Telecom, the paper will describe the enterprise customer portal with self-service features for the further development in the telecommunication industry.</p>
-                                <a href="A Study of Enterprise Customer Self Service.pdf" target="_blank">
-                                    <img class="smallDownloadPicture" src="images/common/download.png" alt="" /></a>
+                                <p>With the evolution of Web-based self-service, business customers are able to use the information such as reporting a trouble ticket or checking their purchase status by themselves. That is to say, online self-service not only provides business customers with more powerful functionalities but also satisfies them by integrating with other channels which are service counters, telephoning, Websites, instant messages, mails, and emails. This paper shows the literature review of online self-service for enterprise customers, and then examines the Web self-service from Verizon, AT&T and Chunghwa Telecom. Therefore, with the comparison, we provide conclusive recommendations for improving self-service for the telecommunication industry.</p>
+                                <a href="{% static 'file/A Study of Enterprise Customer Self Service.pdf' %}" target="_blank">
+                                    <img class="smallDownloadPicture" src="{% static 'images/common/download.png' %}" alt="" /></a>
                             </div>
                         </article>
 
@@ -172,9 +169,9 @@
                                 <p>NTU 2009</p>
                             </header>
                             <div class="publicationContent">
-                                <p>In this thesis, our objective is to evaluate the efficacy of existing verificationcation tools. To this end, we build benchmark cases of vulnerable code that may cause security problems, such as cross-site scripting and SQL injection, but some benchmark cases do not consist of vulnerable code, to determine if a false positive occurs after the tool scans the code. Specically, we use the developed benchmark cases to test four static analysis tools that generate reports of vulnerable program locations, and to evaluate the performance of the tools statistically. As a result, we are able to know the advantages and disadvantages of each tool, so that suggest how to improve the efficacy of the code-scanning tool.</p>
-                                <a href="A Study of Methods and Tools for Analyzing Security Vulnerabilities in Web Applications.pdf" target="_blank">
-                                    <img class="smallDownloadPicture" src="images/common/download.png" alt="" /></a>
+                                <p>In this thesis, our objective is to evaluate the efficacy of existing verification cation tools. To this end, we build benchmark cases containing vulnerable code that causes security problems, such as cross-site scripting and SQL injection, but some benchmark cases do not have vulnerable code, to determine if a false positive occurs after scanning those code. Specifically, we use the developed benchmark cases to test four static analysis tools that generate reports of where the vulnerable code is, and to evaluate the performance of the tools statistically. As a result, we are able to know the advantages and disadvantages of each tool, so that suggest how to improve the efficacy in developing of the code-scanning tool.</p>
+                                <a href="{% static 'file/A Study of Methods and Tools for Analyzing Security Vulnerabilities in Web Applications.pdf' %}" target="_blank">
+                                    <img class="smallDownloadPicture" src="{% static 'images/common/download.png' %}" alt="" /></a>
                             </div>
                         </article>
 
@@ -186,8 +183,8 @@
                             </header>
                             <div class="publicationContent">
                                 <p>e-Government in Taiwan provided 2,588 applications through online services in 2007, but we considered that the "document re-submitting" service is inconvenient to people. If we accidentally lost, for example, ID, re-submitting process is very troublesome since we have to take day off to apply for the new card. Even worse, people should go to many places if they lost more than one card. This porject carried out a new idea that people can easily re-submit documents via the Internet with a single window service system. The system involved in good communication mechanism with government agencies to achieve an efficient operation process.</p>
-                                <a href="eGOVERNMENT One Stop Shop.pdf" target="_blank">
-                                    <img class="smallDownloadPicture" src="images/common/download.png" alt="" /></a>
+                                <a href="{% static 'file/eGOVERNMENT One Stop Shop.pdf' %}" target="_blank">
+                                    <img class="smallDownloadPicture" src="{% static 'images/common/download.png' %}" alt="" /></a>
                             </div>
                         </article>
                     </section>
@@ -196,9 +193,9 @@
                     <section id="profile">
                         <h2 id="profileAnchor" class="greenBackground">Profile</h2>
                         <article>
-                            <img src="images/common/tabitha.jpg" class="profilePicture" />
-                            <p>Hi, my name is Yi-Shan Tabitha Tsai. I came from Taiwan and have been working for 6<sup>+</sup> years(including working in the U.S.A. for 3<sup>+</sup> years, and now I am in San Jose, California.) The system building and the Web design, especially self-service and e-commerce sites, have been my major tasks after my graduation from National Taiwan University. I like learning and trying everything new whether through books(Recently I am reading 'The Design of Everyday Things'. That is a fantastic and interesting book.), social network, online articles, and, the most often, human, especially users. Throughout the work experience these years, I’ve believed that designers should work from the vantage point of users, their work, and their environment to build successful and powerful applications, thus, to minimize the gap between how designers/developers think people use Websites and how people actually use them. My dream is to be a professional UX/UI designer for a better world. ;P</p>
-                            <a href="resume.pdf" target="_blank">RESUME...<img class="smallDownloadPicture" src="images/common/download.png" alt="" /></a>
+                            <img src="{% static 'images/common/tabitha.jpg' %}" class="profilePicture" />
+                            <p>Hi, my name is Yi-Shan Tabitha Tsai. I came from Taiwan and have been working for 7<sup>+</sup> years(including working in the U.S.A. for 4<sup>+</sup> years, and now I am in San Jose, California.) The system building and the Web design, especially self-service and e-commerce sites, have been my major tasks after my graduation from National Taiwan University. I like learning and trying everything new whether through books(Recently I am reading 'The Design of Everyday Things'. That is a fantastic and interesting book.), social network, online articles, and, the most often, human, especially users. Throughout the work experience these years, I’ve believed that designers should work from the vantage point of users, their work, and their environment to build successful and powerful applications, thus, to minimize the gap between how designers/developers think people use Websites and how people actually use them. My dream is to be a professional UX/UI designer for a better world. ;P</p>
+                            <a href="{% static 'file/resume.pdf' %}" target="_blank">RESUME...<img class="smallDownloadPicture" src="{% static 'images/common/download.png' %}" alt="" /></a>
                         </article>
                     </section>
                 </div>
@@ -212,15 +209,15 @@
             <!-- Footer Links -->
             <ul class="footerLeft">
                 <li><a href="mailto:bigtq13@gmail.com">
-                    <img src="images/common/email.png" /></a></li>
+                    <img src="{% static 'images/common/email.png' %}" /></a></li>
                 <li><a href="https://www.linkedin.com/pub/tabitha-tsai/74/805/ba">
-                    <img src="images/common/linkedin.png" /></a></li>
+                    <img src="{% static 'images/common/linkedin.png' %}" /></a></li>
                 <li><a href="https://get.google.com/albumarchive/104127423831097898950?source=pwa">
-                    <img src="images/common/flickr.png" /></a></li>
+                    <img src="{% static 'images/common/flickr.png' %}" /></a></li>
                 <li><a href="https://www.facebook.com/tabitha.tsai">
-                    <img src="images/common/facebook.png" /></a></li>
+                    <img src="{% static 'images/common/facebook.png' %}" /></a></li>
             </ul>
-            <p class="footerRight">© 2016 yi-shan tabitha tsai</p>
+            <p class="footerRight">© 2017 yi-shan tabitha tsai</p>
         </footer>
         <!-- /footer -->
     </div>
