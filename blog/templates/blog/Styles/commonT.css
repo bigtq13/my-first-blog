@@ -306,6 +306,11 @@ h2 {
     float: left;
 }
 
+
+#projects .secondRowTopLeft {
+    padding: 0 1% 1% 1%;
+}
+
 #projects .topLeft {
     padding: 1%;
 }
@@ -464,6 +469,10 @@ h2 {
         float: left;
     }
 
+    #projects .secondRowTopLeft {
+        padding: 0 3% 3% 3%;
+    }
+    
     #projects .topLeft {
         padding: 3%;
     }
