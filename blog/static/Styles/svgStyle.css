@@ -12,9 +12,19 @@ svg .victimMark
 	fill: #16a085;
 }
 
+svg .victimMark:hover
+{
+	fill: orange;
+}
+
 svg .selectedVictimMark
 {
 	fill: orange;
+}
+
+#brewerySquare:hover, 
+#workHouseSquare:hover{
+	fill: pink;
 }
 
 #dateSVG rect:hover, 
@@ -57,7 +67,7 @@ svg .selectedVictimMark
 				display: none;
 			}
 	
-#dateSVG
+#dateSVG, #ageSVG, #genderSVG
 {
 	padding-left: 1%;
 }
@@ -91,3 +101,14 @@ svg	.axis line {
 	  stroke: #000;
 	  shape-rendering: crispEdges;
 	}
+
+#aboutSourceArea
+{
+	padding-left: 2%;
+	display: inline-block;
+}
+
+#aboutSource:hover
+{
+	background-color: gainsboro;
+}

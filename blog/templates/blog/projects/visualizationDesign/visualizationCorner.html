@@ -21,6 +21,11 @@
                     $(this).addClass("open");
                 }
             });
+			
+			var xx="‧Hi, That's me. Tabitha Tsai. I have to tell you I wanna work in Bay Area NEXT Summer.<br/>‧The source is from http://vis.ninja/teaching/H517/project1/.<br/>‧Try to move your mouse into the map on the left or bar charts at the bottom =)";
+			$('#aboutSourceArea').hover(function() {  
+    			$('#mapPanelValue').html(xx).show();
+			});
         });
 		
 	  //replace adjust date
@@ -112,6 +117,30 @@
 			  var svg = d3.select("#mapSVG")
 			  .attr("width", mw)
 			  .attr("height", mh);
+			  
+			  //--brewery
+	  		  svg.select("#brewerySquare")
+			   .on("mouseover", function(d) {
+
+				d3.select("#mapPanelValue")
+				.text("There is a brewery.");		
+			   })
+			   .on("mouseout", function(d) {
+				d3.select("#mapPanelValue")
+				.text("");  
+			   });
+			  
+			  //--work house
+	  		  svg.select("#workHouseSquare")
+			   .on("mouseover", function(d) {
+
+				d3.select("#mapPanelValue")
+				.text("There is a work house.");		
+			   })
+			   .on("mouseout", function(d) {
+				d3.select("#mapPanelValue")
+				.text("");  
+			   });
 			  
 			  //scalling
 			  var padding=20;
@@ -264,7 +293,16 @@
 	          })
 			  	  .attr('width', 7)
 			  	  .attr('height', 2)
-			  	  .attr("class", function(d){ return "victimMark _"+d[3]+" _"+d[4]+" _"+d[5]});
+			  	  .attr("class", function(d){ return "victimMark _"+d[3]+" _"+d[4]+" _"+d[5]})
+			  .on("mouseover", function(d) {
+				  
+				d3.select("#mapPanelValue")
+				.text("This victim was a "+d[3]+" years old "+d[4]+"ale, and dead on "+d[5]+".");
+			   })
+			   .on("mouseout", function(d) {
+				d3.select("#mapPanelValue")
+				.text("");
+			   });
 			  
 			  d3.select("#mapSVG")
 			  .attr("width", mw)
@@ -383,6 +421,9 @@
 			   })
 			   .on("mouseout", function(d) {
 				//disable bling bling victims in the map
+				d3.select("#mapPanelValue")
+				.text("");
+				
 				d3.select("#mapSVG")
 				  .selectAll("._"+d[0])
 				  .classed("victimMark",true);
@@ -522,6 +563,9 @@
 
 			   })
 			   .on("mouseout", function(d) {
+				d3.select("#mapPanelValue")
+				.text("");
+				
 				//disable bling bling victims in the map
 				d3.select("#mapSVG")
 				  .selectAll("._"+d[0])
@@ -542,11 +586,11 @@
 			  }
 			  victimData4genderCSV.push(["m　",amount_male]);
 			  victimData4genderCSV.push(["f　",amount_female]);
+			  victimData4genderCSV.push(["　",0]);
 
-			  console.log()
 			  
 			 //Width and height
-			var w4genderSVG = 130;
+			var w4genderSVG = 250;
 			var h4genderSVG = 250;
 		    var padding4genderSVG=20;
 			  
@@ -574,10 +618,22 @@
 								.attr("height", h4genderSVG);
 			  
 			svg4genderSVG.append("text")
-                       .attr("x", 150)             
+                       .attr("x", 210)             
                        .attr("y", 50)
                        .attr("text-anchor", "middle")  
-                       .text("Death by Gender");  
+                       .text("Death");
+			  
+			  svg4genderSVG.append("text")
+                       .attr("x", 210)             
+                       .attr("y", 70)
+                       .attr("text-anchor", "middle")  
+                       .text("by");
+			  
+			svg4genderSVG.append("text")
+                       .attr("x", 210)             
+                       .attr("y", 90)
+                       .attr("text-anchor", "middle")  
+                       .text("Gender");  
 			
 			//Create X axis
 			svg4genderSVG.append("g")
@@ -606,7 +662,8 @@
 			   .data(victimData4genderCSV)
 			   .enter()
 			   .append("rect")
-			   .attr("x", function(d) { return xScale4genderSVG(d[0])+padding4genderSVG*0.7; })
+			   .attr("x", function(d) { return xScale4genderSVG(d[0])+padding4genderSVG*0.7; 
+			   })
 			   .attr("y", function(d) {
 			   		return yScale4genderSVG(d[1]+padding4genderSVG*0.7);
 			   })
@@ -623,8 +680,6 @@
 				d3.select("#mapPanelValue")
 				.text(textString);
 				
-				console.log(d[0]);
-				
 				//bling bling victims in the map
 				d3.select("#mapSVG")
 				  .selectAll(("._"+d[0]).replace("　",""))
@@ -636,6 +691,9 @@
 
 			   })
 			   .on("mouseout", function(d) {
+				d3.select("#mapPanelValue")
+				.text("");
+				
 				//disable bling bling victims in the map
 				d3.select("#mapSVG")
 				  .selectAll(("._"+d[0]).replace("　",""))
@@ -647,8 +705,11 @@
 			   })
 		   }
 	  });
+			  
+	  //4. 
+      
 
-		
+	   	
 	  /*//test
 	  for(j=0;j< streetData.length;j++)
 	  {
@@ -678,10 +739,16 @@
 </head>
 <body>
   <br><br>
-  <svg id="mapSVG"></svg>
+  <svg id="mapSVG">
+    <path id="brewerySquare" d=" M 464 180 L 480 204 L 498 196 L 481 173 L 464 180" stroke="none" stroke-width="2" fill="black" />
+    <path id="workHouseSquare" d=" M 367 143 L 380 165 L 420 152 L 407 130 L 367 143" stroke="none" stroke-width="2" fill="black" />
+  </svg>
   <div id="maptip">
+  <!--<path d=" M 10 25 L 10 75 L 60 75 L 10 25" stroke="none" stroke-width="2" fill="black" />-->
+  <!--<path d=" M 500 100 L 500 150 L 560 150 L 560 100 L 500 100" stroke="none" stroke-width="2" fill="black" />-->
 	  <p><strong>Information</strong></p>
-      <p><span id="mapPanelValue"></span></p>
+      
+      <p><span id="mapPanelValue">Try to move your mouse into the map on the left or bar charts at the bottom =)</span></p>
   </div>
   <br>
   <!--<div id="datetip" class="hidden">
@@ -691,6 +758,7 @@
   <svg id="dateSVG"></svg>
   <svg id="ageSVG"></svg>
   <svg id="genderSVG"></svg>
+  <div id="aboutSourceArea"><p id="aboutSource">About</p></div>
        <div id="wrapper">
         <div id="main">
             <div class="outerContainer">
