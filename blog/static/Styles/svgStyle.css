@@ -1,0 +1,93 @@
+svg line {
+            stroke: black;
+        }
+
+svg .pumpMark
+{
+	fill: crimson;
+}
+
+svg .victimMark
+{
+	fill: #16a085;
+}
+
+svg .selectedVictimMark
+{
+	fill: orange;
+}
+
+#dateSVG rect:hover, 
+#ageSVG rect:hover, 
+#genderSVG rect:hover {
+				fill: orange;
+			}
+			
+#datetip {
+				position: absolute;
+				width: 200px;
+				height: auto;
+				padding: 10px;
+				background-color: white;
+				-webkit-border-radius: 10px;
+				-moz-border-radius: 10px;
+				border-radius: 10px;
+				-webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+				-moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+				box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+				pointer-events: none;
+			}
+	
+#maptip {
+				display: inline-block;
+				vertical-align: top;
+				width: 33%;
+				height: auto;
+				padding: 1%;
+				background-color: white;
+				-moz-border-radius: 10px;
+				border-radius: 10px;
+				-webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+				-moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+				box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+				pointer-events: none;
+			}
+
+#datetip .hidden {
+				display: none;
+			}
+	
+#dateSVG
+{
+	padding-left: 1%;
+}
+
+#dateSVG #datetip p {
+				margin: 0;
+				font-family: sans-serif;
+				font-size: 16px;
+				line-height: 20px;
+			}
+
+#dateSVG rect {
+	fill: blue;
+}
+
+#ageSVG rect {
+	fill: green;
+}
+
+#genderSVG rect {
+	fill: yellow;
+}
+
+svg .axis {
+	  font: 10px sans-serif;
+	}
+
+svg	.axis path,
+svg	.axis line {
+	  fill: none;
+	  stroke: #000;
+	  shape-rendering: crispEdges;
+	}

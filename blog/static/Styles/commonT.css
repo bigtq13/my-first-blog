@@ -390,6 +390,7 @@ h2 {
 /* =Media Queries
 -------------------------------------------------------------- */
 @media all and (max-width: 600px) {
+    
     .outerContainer {
         width: 100%;
     }
