@@ -20,6 +20,9 @@ def chtselfserviceT(request):
 def amrtT(request):
     return render(request, 'blog/projects/amrtT.html', {})
 
+def visualizationCorner(request):
+    return render(request, 'blog/projects/visualizationDesign/visualizationCorner.html', {})
+
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, 'blog/projects/post_list.html', {'posts': posts})
