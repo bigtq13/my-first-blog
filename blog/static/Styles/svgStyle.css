@@ -24,7 +24,7 @@ svg .selectedVictimMark
 
 #brewerySquare:hover, 
 #workHouseSquare:hover{
-	fill: #f7fcfd;
+	fill: #00441b;
 }
 
 #dateSVG rect:hover, 
