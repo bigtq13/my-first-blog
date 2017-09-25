@@ -4,33 +4,33 @@ svg line {
 
 svg .pumpMark
 {
-	fill: crimson;
+	fill: #238b45;
 }
 
 svg .victimMark
 {
-	fill: #16a085;
+	fill: #66c294;
 }
 
 svg .victimMark:hover
 {
-	fill: orange;
+	fill: #00441b;
 }
 
 svg .selectedVictimMark
 {
-	fill: orange;
+	fill: #00441b;
 }
 
 #brewerySquare:hover, 
 #workHouseSquare:hover{
-	fill: pink;
+	fill: #f7fcfd;
 }
 
 #dateSVG rect:hover, 
 #ageSVG rect:hover, 
 #genderSVG rect:hover {
-				fill: orange;
+				fill: #00441b;
 			}
 			
 #datetip {
@@ -80,15 +80,15 @@ svg .selectedVictimMark
 			}
 
 #dateSVG rect {
-	fill: blue;
+	fill: #f89828;
 }
 
 #ageSVG rect {
-	fill: green;
+	fill: #0397d5;
 }
 
 #genderSVG rect {
-	fill: yellow;
+	fill: #7ac043;
 }
 
 svg .axis {
