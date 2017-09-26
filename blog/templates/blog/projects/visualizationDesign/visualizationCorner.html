@@ -119,24 +119,32 @@
 			  .attr("width", mw)
 			  .attr("height", mh);
 			  
+			  //--oxford street
+	  		  svg.select("#oxfordStreet")
+			   .on("mouseover", function(d) {
+				$('#mapPanelValue').html("(You select a road from the map.)<br/>Here is oxford street.").show();
+			   })
+			   .on("mouseout", function(d) {
+				$('#mapPanelValue').html("(You selected a road from the map.)<br/>Here is oxford street.").show(); 
+			   });
 			  
 			  
 			  //--brewery
 	  		  svg.select("#brewerySquare")
 			   .on("mouseover", function(d) {
-				$('#mapPanelValue').html("(You select a place from the map.)<br/>There is a brewery.").show();
+				$('#mapPanelValue').html("(You select a place from the map.)<br/>Here is a brewery.").show();
 			   })
 			   .on("mouseout", function(d) {
-				$('#mapPanelValue').html("(You selected a place from the map.)<br/>There is a brewery.").show(); 
+				$('#mapPanelValue').html("(You selected a place from the map.)<br/>Here is a brewery.").show(); 
 			   });
 			  
 			  //--work house
 	  		  svg.select("#workHouseSquare")
 			   .on("mouseover", function(d) {
-				$('#mapPanelValue').html("(You select a place from the map.)<br/>There is a work house.").show();		
+				$('#mapPanelValue').html("(You select a place from the map.)<br/>Here is a work house.").show();		
 			   })
 			   .on("mouseout", function(d) {
-				$('#mapPanelValue').html("(You selected a place from the map.)<br/>There is a work house.").show();  
+				$('#mapPanelValue').html("(You selected a place from the map.)<br/>Here is a work house.").show();  
 			   });
 			  			  
 			  //scalling
@@ -812,6 +820,7 @@
   <svg id="mapSVG">
     <path id="brewerySquare" d=" M 464 180 L 480 204 L 498 196 L 481 173 L 464 180" stroke="none" stroke-width="2" fill="black" />
     <path id="workHouseSquare" d=" M 367 143 L 380 165 L 420 152 L 407 130 L 367 143" stroke="none" stroke-width="2" fill="black" />
+    <line id="oxfordStreet" x1="141" y1="105" x2="588" y2="42" />
   </svg>
   <div id="maptip">
 	  <p><strong>Information</strong></p>

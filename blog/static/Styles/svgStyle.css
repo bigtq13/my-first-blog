@@ -32,6 +32,11 @@ svg .selectedVictimMark
 	fill: #00441b;
 }
 
+#oxfordStreet:hover
+{
+	fill: #00441b;
+}
+
 #dateSVG rect:hover, 
 #ageSVG rect:hover, 
 #genderSVG rect:hover {
