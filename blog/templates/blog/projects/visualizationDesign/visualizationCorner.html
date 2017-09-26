@@ -22,7 +22,7 @@
             });
 			
 			$('#aboutSourceArea').hover(function() {  
-    			$('#mapPanelValue').html("‧Hi, That's me. Tabitha Tsai. I have to tell you I wanna work in Bay Area NEXT Summer.<br/>‧The source is from http://vis.ninja/teaching/H517/project1/.<br/>‧Try to move your mouse into the map on the left or bar charts at the bottom. Or move the purple rectangle on the top left into the map. =)").show();
+    			$('#mapPanelValue').html("‧Hi, it's me. Tabitha Tsai. I have to tell you I wanna work in Bay Area NEXT Summer.<br/>‧The source is from http://vis.ninja/teaching/H517/project1/.<br/>‧Try to move your mouse into the map on the left or bar charts at the bottom. Or move the rectangle on the top left into the map. =)").show();
 			});
         });
 		
@@ -190,7 +190,7 @@
 			  for(i = 0; i < pumpCSV.length; i++) 
 			  {
 				  tempID++;
-				  pumpData.push([parseInt(tempID), parseFloat(pumpCSV[i].pumpX), parseFloat(pumpCSV[i].pumpY), 2]);
+				  pumpData.push([parseInt(tempID), parseFloat(pumpCSV[i].pumpX), parseFloat(pumpCSV[i].pumpY), 4]);
 		      }
 				
 			  //draw pumps
@@ -319,7 +319,7 @@
 									else if (deathAmountinARectArea>1) {deathAmountString=deathAmountinARectArea+" persons dead in this area.";}
 									else {}
 									
-									$('#mapPanelValue').html("(You drag the purple rectangle into the map.)<br/>"+deathAmountString).show();
+									$('#mapPanelValue').html("(You drag the rectangle into the map.)<br/>"+deathAmountString).show();
 									  //.text(deathAmountString);
                                 });
 
@@ -815,7 +815,7 @@
   </svg>
   <div id="maptip">
 	  <p><strong>Information</strong></p>
-      <p><span id="mapPanelValue">Try to move your mouse into the map on the left or bar charts at the bottom. Or move the purple rectangle on the top left into the map. =)</span></p>
+      <p><span id="mapPanelValue">Try to move your mouse into the map on the left or bar charts at the bottom. Or move the rectangle on the top left into the map. =)</span></p>
   </div>
   <br>
   <svg id="dateSVG"></svg>
