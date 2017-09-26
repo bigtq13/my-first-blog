@@ -21,6 +21,11 @@ svg .selectedVictimMark
 {
 	fill: #00441b;
 }
+#brewerySquare, 
+#workHouseSquare{
+	fill: grey;
+}
+
 
 #brewerySquare:hover, 
 #workHouseSquare:hover{
@@ -103,4 +108,9 @@ svg	.axis line {
 {
 	background-color: gainsboro;
 	cursor: hand;
+}
+.rotateImage{
+	-ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
 }

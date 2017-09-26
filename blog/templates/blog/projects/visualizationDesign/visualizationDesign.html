@@ -1,0 +1,202 @@
+﻿{% load staticfiles %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Enterprise Integrated Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'Styles/commonT.css' %}" />
+    <link rel="stylesheet" href="{% static 'Styles/navStyle.css' %}" />
+
+    <!-- favicon -->
+    <!-- for FF, Chrome, Opera -->
+    <link rel="icon" type="image/png" href="{% static '/images/icons/favicon-small.png' %}" sizes="16x16" />
+    <link rel="icon" type="image/png" href="{% static '/images/icons/favicon-large.png' %}" sizes="32x32" />
+    <!-- for IE -->
+    <link rel="icon" type="image/x-icon" href="{% static '/images/icons/favicon.ico' %}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{% static '/images/icons/favicon.ico' %}" />
+
+    <!-- Javascript -->
+    <script src="{% static 'Scripts/jquery-1.9.1.min.js' %}"></script>
+    <script src="{% static 'Scripts/modernizr.custom.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+            $("#nav-mobile").html($("#nav-main").html());
+            $("#nav-trigger span").click(function () {
+                if ($("nav#nav-mobile ul").hasClass("expanded")) {
+                    $("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
+                    $(this).removeClass("open");
+                } else {
+                    $("nav#nav-mobile ul").addClass("expanded").slideDown(250);
+                    $(this).addClass("open");
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="main">
+            <div class="outerContainer">
+                <div class="fixedMenuBar">
+                    <div id="logo">
+                        <a href="../index.html">
+                            <img src="{% static 'images/common/Tabitha-i.png' %}" class="logoIcon" /></a>
+                    </div>
+                    <div id="nav-trigger">
+                        <span>Menu</span>
+                    </div>
+                    <nav id="nav-main">
+                        <ul>
+                            <li><a href="../../index.html#projectsAnchor">PROJECTs</a></li>
+                            <li><a href="../../index.html#publicationsAnchor">PUBLICATIONs</a></li>
+                            <li><a href="../../index.html#profileAnchor">PROFILE</a></li>
+                        </ul>
+                    </nav>
+                    <nav id="nav-mobile"></nav>
+                </div>
+                <div class="innerContainer">
+                    <div class="line disappear"></div>
+                    <header id="objective">
+                        <a href="visualizationCorner.html">
+							<img src="{% static 'images/common/visualizationD3.png' %}" /></a>
+                        <article>
+                            <h1>This visualization tool helps analysts to view data visually.</h1>
+                        </article>
+                    </header>
+
+                    <div class="line"></div>
+                    <!--STORY-->
+                    <section id="story">
+                        <h2>Story</h2>
+                        <article>
+                            <header role="banner">
+                                <p>Our goal is to build an ability to interpret data visually with curiosity and empathy to assist experts, such as geneticists or stock analysts, when they are working. In our individual project, our professor, Khairi Reda, requires us taking class of Visualization Design, Analysis, and Evaluation to use D3.js to interpret the data for the Broad Street Cholera Outbreak in London in 1854 with concepts shared in lectures, including, but not limited to, color perception, the way researchers interpret, and data patterns. With a brief introduction of HTML, CSS, and SVG, all students are woking on this project with a new language, D3, to build an interactive visualization tool. You will see this visualization tool includes interaction between the map and charts, and information shows at the top right corner to give users more ideas of what they select either on the map or bar charts.</p>
+                            </header>
+                        </article>
+                    </section>
+                    
+                    <!--STORY-->
+                    <section id="video">
+                        <h2>Video Introduction</h2>
+                        <article>
+                            <header role="banner">
+                                <p></p>
+                            </header>
+                            <object data="http://www.youtube.com/embed/aTlotw5EgHs" width="560" height="315"></object>
+                        </article>
+                        
+                        <!--<iframe width="560" height="315"  src="https://youtu.be/aTlotw5EgHs" frameborder="0" allowfullscreen></iframe>-->
+                    </section>
+
+                    <!--ROLE-->
+                    <section id="role">
+                        <h2>Role</h2>
+                        <article>
+                            <header role="banner">
+                                <p>Web Designer & Developer</p>
+                            </header>
+                        </article>
+                    </section>
+
+                    <!--DESIGN PROCESS-->
+                    <section id="process">
+                        <h2>Design Process</h2>
+                        <article>
+                            <header role="banner">
+                                <div class="divCenter">
+                                    <ol class="tilted-list">
+                                        <li><strong>At the beginning: </strong>I’m used to thinking about the goal of projects to find a direction in order to use the limited time to do things efficiently. In other words, I’m trying to think about what is the right thing I’m going to do and how to do things right. At the beginning, I sketched what the result may look like to determine what components I’ll include and what data structure I’ll implement into this project. Also I vaguely go through one of textbooks ‘Interactive Data Visualization for the Web’ to get brief ideas what I may use while developing.</li>
+                                        <li><strong>While developing: </strong>Sometimes I need to calculate coordinates since I rearrange the size of components by range(), a D3 method for scaling, to get the right (x,y) in the map.</li>
+                                    </ol>
+                                </div>
+                            </header>
+                            <figure>
+                                <img src="{% static 'images/common/visProject1_designSketch.jpg' %}" alt="Sketches at the beginning"/>
+                                <figcaption>There are some components I choose for data interpretation, such as a map and bart charts and pie charts. The purpose of using different colors in this sketches is for prioritizing tasks I’m going to complete. That is to say, it’s really obvious to complete tasks from simpler ones described in project requirements.</figcaption>
+                            </figure>
+                            
+                            <figure>
+                                <img src="{% static 'images/common/visProject1_prioritizingTasks.jpg' %}" alt="Prioritizing Tasks"/>
+                                <figcaption>Thinking about the project with a big view and then separating those into tasks, and even subtasks not only gives me an idea what I should do next but also assure myself I’m having more improvements after finishing each subtask.</figcaption>
+                            </figure>
+                            
+                            <figure>
+                                <img src="{% static 'images/common/visProject1_rangeCalculating.jpg' %}" alt="Calculating the coordinates"/>
+                                <figcaption>Coordinates have been transformed from original (x, y) into new ones because it’s better to adjust the size or the position into what you want to present on the screen. This is an example to get new (x,y) from the old ones provided by .csv files in order to know what area the draggable rectangle covers on for calculating the amount of deaths.</figcaption>
+                            </figure>
+                        </article>
+                    </section>
+                    
+                    <!--DESIGN CHOICES-->
+                    <section id="process02">
+                        <h2>Design Choices</h2>
+                        <article>
+                            <header role="banner">
+                                <div class="divCenter">
+                                    <ol class="tilted-list">
+                                        <li><strong>About the color: </strong>Using Color Brewer to select sequential colors in order to use illumination to set colors at the normal mode and highlight mode, and then using Color Oracle to see what if the user of this visualization tool is a deuteranopia,  a protanopia, or a tritanopia. Moreover, I removed some color words in the visualization tool to avoid confusing users who have some visual impairments. For example, I used ‘Please use the purple rectangle to …’ on the information board on the top right corner and then remove the word ’purple’ because eye-impaired users, especially for tritanopia, see purple as red brown. As the three bar charts, I choose three colors I like and then see it with Color Oracle, and then rearranged these three colors because orange and green look the same as the view of deuteranopia or protanopia.</li>
+                                        <li><strong>About the data structure: </strong>I tried  and gave up some structures which I planed to use for this project. For example, I apply two-dimension array to this project instead of using objects (I don’t know why objects didn’t work on me!) Since I have to make my map and charts interactively, I planned to give elements class with information of, for instance, each victim’s age range, gender, and death date. So I can to change its CSS to highlight points I want to emphasis. For example, when users move their mice at the ‘male’ bar in the bar chart of Death by Gender, then victims who are males will change colors in the map simultaneously.</li>
+                                    </ol>
+                                </div>
+                            </header>
+                            <figure>
+                                <img src="{% static 'images/common/visProject1_colorSelection.jpg' %}" alt="Color Selection"/>
+                                <figcaption>Using sequential colors generating from Color Brewer and designating colors for each component, including normal mode and highlight mode of brewery, work house, victims, pumps, and bar charts.</figcaption>
+                            </figure>
+                        </article>
+                    </section>
+
+                    <!--RESULT-->
+                    <section id="result">
+                        <h2>Use Case</h2>
+                        <article>
+                            <header role="banner">
+                                <p>If I was a detective for the Broad Street Cholera Outbreak in London in 1854, I would like to see  the map, where victims, pumps, work house, brewery are located at the beginning. There are three different factors, including death date, gender, and age range. In order to find some patterns, I would use these three bar charts. For example, if there is any specific attribute to see victims are around some pumps or buildings.</p>
+                                
+                                <p>First of all, I’ll skip the gender factor because the death amount of males and females are almost the same from the interaction between the bar chart of Death by Gender. Secondly, in the bart chart of Death by Age, it shows comparatively more people under 10 years old dead closer to the brewery and the work house. So I would like to try to hover those victims on the map to see their death dates.</p>
+                                
+                                <figure>
+                                <img src="{% static 'images/common/visProject1_hoverAtAgeUnder10.png' %}" alt="Hovering at the bar chart of Death by Age"/>
+                                <figcaption>People whose age is under 10 years old dead close to the brewery and the work house.</figcaption>
+                                </figure>
+                                <br/>
+                                <p>On the other hand, I would use the rectangle on the top left to see how many people dead in a specific area to see if more people dead near those places. I know the amount of death near the brewery is more than those near the work house by using this draggable rectangle. I would say the water near the brewery would be contaminated more, and then see how many people dead around pumps near the brewery. The result is the amount of death more around the brewer and pumps near the brewery, so I may say the water should be contaminated in this area, and here could be the source of cholera.</p>
+                                
+                                <figure>
+                                <img src="{% static 'images/common/visProject1_drag.png' %}" alt="Calculating the coordinates"/>
+                                <figcaption>See the amount of death is more at the brewery and then check the water around pumps near the brewery.</figcaption>
+                            </figure>
+                            </header>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- #main -->
+
+
+        <!-- Footer -->
+        <footer role="contentinfo" class="footer">
+            <!-- Footer Links -->
+            <ul class="footerLeft">
+                <li><a href="mailto:bigtq13@gmail.com">
+                    <img src="{% static 'images/common/email.png' %}" /></a></li>
+                <li><a href="https://www.linkedin.com/pub/tabitha-tsai/74/805/ba">
+                    <img src="{% static 'images/common/linkedin.png' %}" /></a></li>
+                <li><a href="https://get.google.com/albumarchive/104127423831097898950?source=pwa">
+                    <img src="{% static 'images/common/flickr.png' %}" /></a></li>
+                <li><a href="https://www.facebook.com/tabitha.tsai">
+                    <img src="{% static 'images/common/facebook.png' %}" /></a></li>
+            </ul>
+            <p class="footerRight">© 2017 yi-shan tabitha tsai</p>
+        </footer>
+        <!-- /footer -->
+    </div>
+    <!-- /#wrapper -->
+</body>
+</html>

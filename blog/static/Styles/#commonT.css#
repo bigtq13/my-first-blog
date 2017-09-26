@@ -1,4 +1,4 @@
-﻿/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 -------------------------------------------------------------- */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -376,12 +376,12 @@ h2 {
     background-color: rgba(46,183,156,1);
 }
 
-#video h2, #story h2, #process h2, #role h2, #result h2 {
+#story h2, #process h2, #role h2, #result h2 {
     text-decoration: underline;
     padding: 2em 0 0 1.3em;
 }
 
-#video article, #story article, #process article, #role article, #result article {
+#story article, #process article, #role article, #result article {
     width: 100%;
     padding: 0 1% 1% 5.5%;
     float: left;
@@ -544,11 +544,11 @@ h2 {
         background-color: rgba(46,183,156,1);
     }
 
-    #video header, #story header, #process header, #role header, #result header {
+    #story header, #process header, #role header, #result header {
         padding: 1% 0;
     }
 
-    #video article, #story article, #process article, #role article, #result article {
+    #story article, #process article, #role article, #result article {
         width: 100%;
         padding: 1% 1% 1% 5.5%;
         float: left;
