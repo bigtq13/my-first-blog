@@ -364,11 +364,19 @@
 			  	  .attr('height', 2)
 			  	  .attr("class", function(d){ return "victimMark _"+d[3]+" _"+d[4]+" _"+d[5]})
 			  .on("mouseover", function(d) {  
-				$('#mapPanelValue').html("(You select a victim from the map.)<br>This victim was a "+d[3]+" years old "+d[4]+"ale, and dead on "+d[5]+".").show();
+				var femaleOrMale;
+				if (d[4].replace("　","") == "f") femaleOrMale="emale";
+				else if (d[4].replace("　","") == "m") femaleOrMale="ale";
+				  
+				$('#mapPanelValue').html("(You select a victim from the map.)<br>This victim was a "+d[3]+" years old "+d[4]+femaleOrMale+", and dead on "+d[5]+".").show();
 				//.text("This victim was a "+d[3]+" years old "+d[4]+"ale, and dead on "+d[5]+".");
 			   })
 			   .on("mouseout", function(d) {
-				$('#mapPanelValue').html("(You selected a victim from the map.)<br>This victim was a "+d[3]+" years old "+d[4]+"ale, and dead on "+d[5]+".").show();
+				var femaleOrMale;
+				if (d[4].replace("　","") == "f") femaleOrMale="emale";
+				else if (d[4].replace("　","") == "m") femaleOrMale="ale";
+				  
+				$('#mapPanelValue').html("(You selected a victim from the map.)<br>This victim was a "+d[3]+" years old "+d[4]+femaleOrMale+", and dead on "+d[5]+".").show();
 			   });
 			  
 			  d3.select("#mapSVG")
@@ -750,9 +758,13 @@
 			   })
 			   .on("mouseover", function(d) {
 				
-				if(d[1]==0) { textString=("No "+d[0]+"ale dies.").replace("　",""); }
-				else if (d[1]==1) { textString=("1 "+d[0]+"ale dies.").replace("　",""); }
-			    else { textString=(d[1]+" "+d[0]+"ales dies.").replace("　",""); }
+				var femaleOrMale;
+				if (d[0].replace("　","") == "f") femaleOrMale="emale";
+				else if (d[0].replace("　","") == "m") femaleOrMale="ale";
+				
+				if(d[1]==0) { textString=("No "+femaleOrMale +d[0]+femaleOrMale+" dies.").replace("　",""); }
+				else if (d[1]==1) { textString=("1 "+d[0]+femaleOrMale+ "dies.").replace("　",""); }
+			    else { textString=(d[1]+" "+d[0]+femaleOrMale+"s dies.").replace("　",""); }
 				
 				$('#mapPanelValue').html("(You select '"+(d[0]).replace("　","")+"' at the bar chart of Death by Gender.)<br/>"+textString).show();
 				//.text(textString);
