@@ -124,19 +124,19 @@
 			  //--brewery
 	  		  svg.select("#brewerySquare")
 			   .on("mouseover", function(d) {
-				d3.select('#mapPanelValue').html("(You select a place from the map.)<br/>There is a brewery.").show();
+				$('#mapPanelValue').html("(You select a place from the map.)<br/>There is a brewery.").show();
 			   })
 			   .on("mouseout", function(d) {
-				d3.select("#mapPanelValue").html("(You selected a place from the map.)<br/>There is a brewery.").show(); 
+				$('#mapPanelValue').html("(You selected a place from the map.)<br/>There is a brewery.").show(); 
 			   });
 			  
 			  //--work house
 	  		  svg.select("#workHouseSquare")
 			   .on("mouseover", function(d) {
-				d3.select("#mapPanelValue").html("(You select a place from the map.)<br/>There is a work house.").show();		
+				$('#mapPanelValue').html("(You select a place from the map.)<br/>There is a work house.").show();		
 			   })
 			   .on("mouseout", function(d) {
-				d3.select("#mapPanelValue").html("(You selected a place from the map.)<br/>There is a work house.").show();  
+				$('#mapPanelValue').html("(You selected a place from the map.)<br/>There is a work house.").show();  
 			   });
 			  			  
 			  //scalling
@@ -219,10 +219,10 @@
 						return d[3];
 				   })
 			.on("mouseover", function(d) {	  
-				d3.select("#mapPanelValue").html("(You select a pump from the map.)<br/>This is a pump.").show();
+				$('#mapPanelValue').html("(You select a pump from the map.)<br/>This is a pump.").show();
 			   })
 			   .on("mouseout", function(d) {
-				d3.select("#mapPanelValue").html("(You selected a pump from the map.)<br/>This is a pump.").show();
+				$('#mapPanelValue').html("(You selected a pump from the map.)<br/>This is a pump.").show();
 			   })
 			.attr("class", "pumpMark");
 		  }
@@ -319,7 +319,7 @@
 									else if (deathAmountinARectArea>1) {deathAmountString=deathAmountinARectArea+" persons dead in this area.";}
 									else {}
 									
-									d3.select("#mapPanelValue").html("(You drag the purple rectangle into the map.)<br/>"+deathAmountString).show();
+									$('#mapPanelValue').html("(You drag the purple rectangle into the map.)<br/>"+deathAmountString).show();
 									  //.text(deathAmountString);
                                 });
 
@@ -356,11 +356,11 @@
 			  	  .attr('height', 2)
 			  	  .attr("class", function(d){ return "victimMark _"+d[3]+" _"+d[4]+" _"+d[5]})
 			  .on("mouseover", function(d) {  
-				d3.select("#mapPanelValue").html("(You select a victim from the map.)<br>This victim was a "+d[3]+" years old "+d[4]+"ale, and dead on "+d[5]+".").show();
+				$('#mapPanelValue').html("(You select a victim from the map.)<br>This victim was a "+d[3]+" years old "+d[4]+"ale, and dead on "+d[5]+".").show();
 				//.text("This victim was a "+d[3]+" years old "+d[4]+"ale, and dead on "+d[5]+".");
 			   })
 			   .on("mouseout", function(d) {
-				d3.select("#mapPanelValue").html("(You selected a victim from the map.)<br>This victim was a "+d[3]+" years old "+d[4]+"ale, and dead on "+d[5]+".").show();
+				$('#mapPanelValue').html("(You selected a victim from the map.)<br>This victim was a "+d[3]+" years old "+d[4]+"ale, and dead on "+d[5]+".").show();
 			   });
 			  
 			  d3.select("#mapSVG")
@@ -463,7 +463,7 @@
 				else if (d[1]==1) { textString="1 person dies on "+d[0]+"."; }
 			    else { textString=d[1]+" persons dies on "+d[0]+"."; }
 
-				d3.select("#mapPanelValue").html("(You select '"+d[0]+"' at the bar chart of Death by Date.)<br>"+textString).show();
+				$('#mapPanelValue').html("(You select '"+d[0]+"' at the bar chart of Death by Date.)<br>"+textString).show();
 				//.text(textString);
 				
 				//bling bling victims in the map
@@ -484,7 +484,7 @@
 				else if (d[1]==1) { textString="1 person dies on "+d[0]+"."; }
 			    else { textString=d[1]+" persons dies on "+d[0]+"."; }
 				//disable bling bling victims in the map
-				d3.select("#mapPanelValue").html("(You selected '"+d[0]+"' at the bar chart of Death by Date.)<br>"+textString).show();
+				$('#mapPanelValue').html("(You selected '"+d[0]+"' at the bar chart of Death by Date.)<br>"+textString).show();
 				//d3.select("#mapPanelValue")
 				//.text("");
 				
@@ -611,7 +611,7 @@
 				else if (d[1]==1) { textString="1 person dies at the age of "+d[0]+"."; }
 			    else { textString=d[1]+" persons dies at the age of "+d[0]+"."; }
 
-				d3.select("#mapPanelValue").html("(You select '"+d[0]+"' at the bar chart of Death by Age.)<br/>"+textString).show();
+				$('#mapPanelValue').html("(You select '"+d[0]+"' at the bar chart of Death by Age.)<br/>"+textString).show();
 				//.text(textString);
 				
 				//bling bling victims in the map
@@ -631,7 +631,7 @@
 				else if (d[1]==1) { textString="1 person dies at the age of "+d[0]+"."; }
 			    else { textString=d[1]+" persons dies at the age of "+d[0]+"."; }
 
-				d3.select("#mapPanelValue").html("(You selected '"+d[0]+"' at the bar chart of Death by Age.)<br/>"+textString).show();
+				$('#mapPanelValue').html("(You selected '"+d[0]+"' at the bar chart of Death by Age.)<br/>"+textString).show();
 				//d3.select("#mapPanelValue")
 				//.text("");
 				
@@ -746,7 +746,7 @@
 				else if (d[1]==1) { textString=("1 "+d[0]+"ale dies.").replace("　",""); }
 			    else { textString=(d[1]+" "+d[0]+"ales dies.").replace("　",""); }
 				
-				d3.select("#mapPanelValue").html("(You select '"+(d[0]).replace("　","")+"' at the bar chart of Death by Gender.)<br/>"+textString).show();
+				$('#mapPanelValue').html("(You select '"+(d[0]).replace("　","")+"' at the bar chart of Death by Gender.)<br/>"+textString).show();
 				//.text(textString);
 				
 				//bling bling victims in the map
@@ -762,7 +762,7 @@
 			   .on("mouseout", function(d) {
 				//d3.select("#mapPanelValue")
 				//.text("");
-				d3.select("#mapPanelValue").html("(You selected '"+(d[0]).replace("　","")+"' at the bar chart of Death by Gender.)<br/>"+textString).show();
+				$('#mapPanelValue').html("(You selected '"+(d[0]).replace("　","")+"' at the bar chart of Death by Gender.)<br/>"+textString).show();
 				
 				//disable bling bling victims in the map
 				d3.select("#mapSVG")
@@ -814,21 +814,15 @@
     <path id="workHouseSquare" d=" M 367 143 L 380 165 L 420 152 L 407 130 L 367 143" stroke="none" stroke-width="2" fill="black" />
   </svg>
   <div id="maptip">
-  <!--<path d=" M 10 25 L 10 75 L 60 75 L 10 25" stroke="none" stroke-width="2" fill="black" />-->
-  <!--<path d=" M 500 100 L 500 150 L 560 150 L 560 100 L 500 100" stroke="none" stroke-width="2" fill="black" />-->
 	  <p><strong>Information</strong></p>
-      
       <p><span id="mapPanelValue">Try to move your mouse into the map on the left or bar charts at the bottom. Or move the purple rectangle on the top left into the map. =)</span></p>
   </div>
   <br>
-  <!--<div id="datetip" class="hidden">
-	  <p><strong>Death Amount</strong></p>
-      <p><span id="datePanelValue">100</span></p>
-  </div>-->
   <svg id="dateSVG"></svg>
   <svg id="ageSVG"></svg>
   <svg id="genderSVG"></svg>
   <div id="aboutSourceArea"><p id="aboutSource">About</p></div>
+  <div id="documentationArea"><p id="documentation">Documentation</p></div>
        <div id="wrapper">
         <div id="main">
             <div class="outerContainer">
@@ -842,9 +836,9 @@
                     </div>
                     <nav id="nav-main">
                         <ul>
-                            <li><a href="../index.html#projectsAnchor">PROJECTs</a></li>
-                            <li><a href="../index.html#publicationsAnchor">PUBLICATIONs</a></li>
-                            <li><a href="../index.html#profileAnchor">PROFILE</a></li>
+                            <li><a href="../../index.html#projectsAnchor">PROJECTs</a></li>
+                            <li><a href="../../index.html#publicationsAnchor">PUBLICATIONs</a></li>
+                            <li><a href="../../index.html#profileAnchor">PROFILE</a></li>
                         </ul>
                     </nav>
                     <nav id="nav-mobile"></nav>
@@ -858,7 +852,18 @@
         <!-- Footer -->
         <footer role="contentinfo" class="footer">
             <!-- Footer Links -->
-                    </footer>
+            <ul class="footerLeft">
+                <li><a href="mailto:bigtq13@gmail.com">
+                    <img src="{% static 'images/common/email.png' %}" /></a></li>
+                <li><a href="https://www.linkedin.com/pub/tabitha-tsai/74/805/ba">
+                    <img src="{% static 'images/common/linkedin.png' %}" /></a></li>
+                <li><a href="https://get.google.com/albumarchive/104127423831097898950?source=pwa">
+                    <img src="{% static 'images/common/flickr.png' %}" /></a></li>
+                <li><a href="https://www.facebook.com/tabitha.tsai">
+                    <img src="{% static 'images/common/facebook.png' %}" /></a></li>
+            </ul>
+            <p class="footerRight">© 2017 yi-shan tabitha tsai</p>
+        </footer>
         <!-- /footer -->
     </div>
     <!-- /#wrapper -->
